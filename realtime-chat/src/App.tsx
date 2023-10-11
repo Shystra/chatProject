@@ -1,14 +1,14 @@
+import { BrowserRouter } from 'react-router-dom'
 import './App.css'
+import { RouteApp } from './routes'
 
 function App() {
   
 
   return (
-    <>
-      <div>
-        <h1 className='bg-slate-800'>testing</h1>  
-      </div>     
-    </>
+    <BrowserRouter>
+      <RouteApp/>
+    </BrowserRouter>
   )
 }
 
