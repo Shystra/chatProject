@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import { Button } from "../components/Button";
-import { CardWrapper } from "../components/CardWrapper";
-import { Input } from "../components/Input";
-import { TextRedirect } from "../components/TextRedirect";
+import { Button } from "../components/Form/Button";
+import { CardWrapper } from "../components/Form/CardWrapper";
+import { Input } from "../components/Form/Input";
+import { TextRedirect } from "../components/Form/TextRedirect";
 
 interface IRegisterProps {
     name: string;
@@ -18,13 +18,9 @@ export function Register() {
 
     } = useForm<IRegisterProps>();
 
-    const submitForm = (data: any) => {
+    const submitForm = (data: IRegisterProps) => {
         console.log("🚀 ~ file: Register.tsx:22 ~ submitForm ~ data:", data)
     };
-
-
-
-
     return (
         <>
 
@@ -39,7 +35,7 @@ export function Register() {
                         <Input
                             placeholder="Email"
                             {...register('email', { required: true })}
-                        />,
+                        />
                         <Input
                             placeholder="Senha"
                             {...register('password', { required: true })}

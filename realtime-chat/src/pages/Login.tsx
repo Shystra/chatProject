@@ -1,7 +1,7 @@
-import { Input } from "../components/Input";
-import { Button } from "../components/Button";
-import { CardWrapper } from "../components/CardWrapper";
-import { TextRedirect } from "../components/TextRedirect";
+import { Input } from "../components/Form/Input";
+import { Button } from "../components/Form/Button";
+import { CardWrapper } from "../components/Form/CardWrapper";
+import { TextRedirect } from "../components/Form/TextRedirect";
 
 import { useForm } from "react-hook-form";
 
@@ -17,7 +17,7 @@ export function Login() {
         formState: { errors },
     } = useForm<ILoginProps>();
 
-    const submitForm = (data: any) => {
+    const submitForm = (data: ILoginProps) => {
         console.log("🚀 ~ file: Login.tsx:21 ~ submitForm ~ data:", data)
     }
 
