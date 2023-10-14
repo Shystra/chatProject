@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import { TextRedirect } from "./TextRedirect";
 
 interface ICardWrapperProps {
     children: ReactNode;
